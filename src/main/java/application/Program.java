@@ -38,7 +38,7 @@ public class Program {
             if (newCheckIn.before(now) || newCheckOut.before(now)) {
                 System.out.println("Error in reservation: reservation dates for update must be future dates");
             }
-            else if (!checkOut.after(checkIn)) {
+            else if (!newCheckOut.after(newCheckIn)) {
                 System.out.println("Error in reservation: Check-out date must be after check-in date");
             }
             else {
